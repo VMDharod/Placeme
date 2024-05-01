@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #00567a;
+}
+
+a:visited{
+    color: #00567a;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.navbar {
+    display:;
+    flex-direction: row;
+  height: 200 px;
+  justify-content:flex-start;
+}
+
+.navbar img {
+  align-self: center;
+  padding-top: 0px;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+.elements {
+  display: flex;
+  flex-direction: row;
+}
+
+.elements li {
+  list-style: none;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.elements a {
+  text-decoration: none;
+  color: #00567a;
+}
+
+.nav-contact {
+  align-self: flex-end;
+  background: #00567a;
+  color: #fff;
+  padding: 7px 15px;
+  margin-bottom: 5px;
+  border-radius: 0 0 10px 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.news-section {
+  font-size: 16px;
+  background: #00567a;
+  color: #fff;
+}
+
+.news-section p {
+  padding: 5px;
+  padding-left: 5%;
+}
+
+.news-section img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.news-section span {
+  background: #50b748;
+  padding: 5px;
+}
+
+.vapiplant {
+  padding-left: 5%;
+  padding-top: 3%;
+  color:#00567a;
+  padding-bottom: 2%;
+}
+
+.vapiplant::after {
+    content: "";
+    display: block;
+    width: 20%; /* Makes the line span the full width of the banner */
+    height: 2px; /* Adjust height for line thickness */
+    background-color: #00567a; /* Matches the banner background color */
+    padding-left: 5%;
+}
+
+.ext {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2%; 
+  padding-bottom: 4%;
+  justify-items: center;
+}
+
+.ext img{
+    border : solid 1px #dadada;
+    border-radius: 8%;
+    scale : 1.5
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Box Example</title>
+<style>
+  .navbar {
+  display: flex;
+  flex-direction: row;
+  height: 72px;
+  justify-content: space-around;
+  margin: 0 20px;
+}
+
+.navbar img {
+  scale: 0.5;
+  align-self: center;
+  padding-top: 180px;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.elements {
+  display: flex;
+  flex-direction: row;
+}
+
+.elements li {
+
+  list-style: none;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.elements a {
+  color: #ff6666;
+  text-decoration: none;
+}
+
+.nav-contact {
+  align-self: flex-end;
+  background: #ff6666;
+  color: #fff;
+  padding: 7px 15px;
+  margin-bottom: 5px;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.heading{
+    justify-content: center;
+}
+  h1{
+  color:#ff6666;
+  }
+  .hidden { display: none;
+  }
+  button {
+      background-color: #ff6666;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      margin: 0px 0px;
+      cursor: pointer;
+      border-radius: 10px; /* Add rounded corners */
+    }
+
+    button:hover {
+      background-color: #ff4d4d; /* Pink hover color */
+    }
+</style>
+</head>
+<body style="background-color: black; color:#ff6666; padding: 4%;">
+    <nav class="navbar">
+    <img src="C:\PlaceMe files\Placemelogo.jpg">
+    <div class="nav-container">
+        <p class="nav-contact">contactus@placeme.in | +91 22 3434 5483</span>
+        <ul class="elements">
+            <li><a href="">Blogs</a></li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="">Queries</a></li>
+        </ul>
+    </div>
+</nav>
+<br> <br> <br> <br><br> <br> <br> <br> <br> 
+<div class="heading"><h1>Get your Questions Answered !</h1></div>
+<b>1. Question</b>: What programming languages are most in demand for jobs in India?<br>
+<b>Answer</b>: In India, programming languages like Java, Python, JavaScript, C++, and SQL are in high demand across various sectors including IT services, software development, and data analytics.<br>
+<button id="answer">Write an answer</button>
+<div id="textBox2" class="hidden">
+  <input type="text" id="inputText2" placeholder="Type here...">
+</div>
+<div id="displayText2"></div>
+<br>
+<br>
+<b>2. Question</b>: What are the typical interview rounds for software development roles in Indian companies?
+<br><b>Answer</b>: Typically, interview rounds for software development roles in India include technical screening (coding challenges), technical interviews (algorithms, data structures), behavioral interviews, and sometimes system design rounds.
+
+<br><button id="answer2">Write an answer</button>
+<div id="textBox3" class="hidden">
+  <input type="text" id="inputText3" placeholder="Type here...">
+</div>
+<div id="displayText3"></div>
+
+
+<br> <br> <br> <br> <br>
+<button id="question">Ask a query</button>
+<div id="textBox" class="hidden">
+  <input type="text" id="inputText" placeholder="Type here...">
+</div>
+<div id="displayText"></div>
+
+<script>
+document.getElementById("question").addEventListener("click", function() {
+  document.getElementById("textBox").classList.remove("hidden");
+});
+
+document.getElementById("inputText").addEventListener("keyup", function(event) {
+  if (event.key === "Enter") {
+    displayText();
+    document.getElementById("textBox").classList.add("hidden");
+  }
+});
+
+document.getElementById("answer").addEventListener("click", function() {
+  document.getElementById("textBox2").classList.remove("hidden");
+});
+
+document.getElementById("inputText2").addEventListener("keyup", function(event) {
+  if (event.key === "Enter") {
+    var input = document.getElementById("inputText2").value;
+    if (input.trim() !== "") {
+      document.getElementById("displayText2").innerHTML = "Your answer : " + input;
+      document.getElementById("answer").style.display = "none";
+    }
+    document.getElementById("textBox2").classList.add("hidden");
+  }
+});
+document.getElementById("answer2").addEventListener("click", function() {
+  document.getElementById("textBox3").classList.remove("hidden");
+});
+
+document.getElementById("inputText3").addEventListener("keyup", function(event) {
+  if (event.key === "Enter") {
+    var input = document.getElementById("inputText3").value;
+    if (input.trim() !== "") {
+      document.getElementById("displayText3").innerHTML = "Your answer : " + input;
+      document.getElementById("answer2").style.display = "none";
+    }
+    document.getElementById("textBox3").classList.add("hidden");
+  }
+});
+
+function displayText() {
+  var input = document.getElementById("inputText").value;
+  if (input.trim() !== "") {
+    document.getElementById("inputText").value =""
+    document.getElementById("displayText").innerHTML = "Your question : " + input;
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs</title>
+  <style>
+    .navbar {
+  display: flex;
+  flex-direction: row;
+  height: 72px;
+  justify-content: space-around;
+  margin: 0 20px;
+}
+
+.navbar img {
+  scale: 0.5;
+  align-self: center;
+  padding-top: 180px;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.elements {
+  display: flex;
+  flex-direction: row;
+}
+
+.elements li {
+
+  list-style: none;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.elements a {
+  color: #ff6666;
+  text-decoration: none;
+}
+
+.nav-contact {
+  align-self: flex-end;
+  background: #ff6666;
+  color: #fff;
+  padding: 7px 15px;
+  margin-bottom: 5px;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+  h1{
+  color:#ff6666;
+  }
+    /* Style the buttons */
+    .button {
+      background-color: #ff6666;
+      border: none;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 22px;
+      margin: 0px 0px;
+      cursor: pointer;
+      border-radius: 10px; /* Add rounded corners */
+    }
+
+    .button:hover {
+      background-color: #ff4d4d; /* Pink hover color */
+    }
+
+    /* Style the content blocks */
+    .block {
+	  color:white;
+	  size:32px;
+      display: none;
+      padding: 5%;
+      margin-top: 0px;
+	  margin-left :50px;
+	  margin-right:50px;
+      background-color: #ff6666;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body align="center" style="background-color:#000000">
+  <nav class="navbar">
+    <img src="C:\PlaceMe files\Placemelogo.jpg">
+    <div class="nav-container">
+        <p class="nav-contact">contactus@placeme.in | +91 22 3434 5483</span>
+        <ul class="elements">
+            <li><a href="">Blogs</a></li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="">Queries</a></li>
+        </ul>
+    </div>
+</nav>
+<br> <br> <br> <br> <br>  <br> 
+  <h1>Blogs by your seniors</h1>
+<br> <br> <br>
+  <button class="button" onclick="toggleBlock('removalBlock')">Removal of students to increase placement percentage</button>
+  <br><br>
+
+  <div id="removalBlock" class="block">
+    <p>The practice of removing students to inflate placement statistics is a contentious issue plaguing many engineering colleges today. While on the surface, it may seem like a strategic move to boost the institution's reputation and attract more recruiters, it comes at a significant cost to both the students and the integrity of the institution.</p>
+    <p>Removing underperforming students solely to enhance placement percentages undermines the fundamental purpose of education – to nurture and develop individuals' skills and talents. It creates an environment of fear and uncertainty among students, leading to increased stress levels and a decline in overall academic performance. Moreover, it perpetuates a culture of dishonesty and manipulation, eroding trust between students, faculty, and administrators.</p>
+  </div>
+  <br> <br> <br>
+  <button class="button" onclick="toggleBlock('faangBlock')">How to get placed in FAANG companies</button>
+  <br><br>
+
+  <div id="faangBlock" class="block">
+    <p>Securing a job at a FAANG (Facebook, Apple, Amazon, Netflix, Google) company is a dream for many aspiring tech professionals. However, breaking into these elite organizations requires more than just technical skills – it demands a strategic approach and a deep understanding of what sets candidates apart in the highly competitive tech industry.</p>
+    <p>To increase your chances of landing a job at a FAANG company, it's essential to focus on both technical proficiency and soft skills. Building a strong foundation in data structures, algorithms, and problem-solving is crucial, as these are often the cornerstone of technical interviews at top tech firms. Additionally, honing your communication and teamwork skills, as well as demonstrating a passion for innovation and continuous learning, can significantly enhance your candidacy.</p>
+  </div>
+   <br> <br> <br> 
+  <button class="button" onclick="toggleBlock('interviewBlock')">Common questions asked in tech interviews</button>
+  <br><br>
+
+  <div id="interviewBlock" class="block">
+    <p>Tech interviews can be daunting, especially when faced with a barrage of technical questions and problem-solving challenges. To help candidates prepare effectively, it's essential to familiarize themselves with the common questions asked in these interviews and develop strategies for tackling them with confidence.</p>
+    <p>One of the most frequently asked questions in tech interviews is about data structures and algorithms. Candidates may be asked to solve coding problems, analyze algorithmic complexities, or implement specific data structures. Additionally, questions related to system design, software engineering principles, and real-world problem-solving scenarios are also common.</p>
+  </div>
+<p style="color: #ff6666;"><br> <br> In order to submit your blog, mail us at contactus@placeme.in</p>
+  <script>
+    function toggleBlock(blockId) {
+      const block = document.getElementById(blockId);
+      block.style.display = block.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>

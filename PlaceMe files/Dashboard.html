@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        .navbar {
+  display: flex;
+  flex-direction: row;
+  height: 72px;
+  justify-content: space-around;
+  margin: 0 20px;
+}
+
+.navbar img {
+  scale: 0.5;
+  align-self: center;
+  padding-top: 180px;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.tags li {
+  list-style: none;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+}
+
+.tags a {
+  text-decoration: none;
+  color: #08bcbc;
+  margin-bottom: 20px;
+}
+
+.tags img{
+    width: 400px;
+    border : solid 2px #dadada;
+    border-radius: 8%;
+}
+
+
+.nav-contact {
+  align-self: flex-end;
+  background: #08bcbc;
+  color: #fff;
+  padding: 7px 15px;
+  margin-bottom: 5px;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+/* .images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-bottom: 4%;
+  padding-right: 10%;
+  max-width:min-content;
+  justify-items: center;
+} */
+
+/* .images img{
+    border : solid 2px #dadada;
+    border-radius: 8%;
+    scale : 0.6;
+} */
+/* .tags {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  padding-top: 2%;
+  justify-items: center;
+} */
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #08bcbc;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* li {
+            display: inline-block;
+            margin: 20px;
+        } */
+
+        .animated-link {
+            text-decoration: none;
+            color: #08bcbc;
+            font-size: 20px;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .animated-link::before,
+        .animated-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #08bcbc;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .animated-link:hover::before,
+        .animated-link:hover::after {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        .animated-link:hover::before {
+            animation: slideUp 0.3s ease forwards;
+        }
+
+        .animated-link:hover::after {
+            animation: slideDown 0.3s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="C:\PlaceMe files\Placemelogo.jpg" alt="unimark-logo">
+        <div class="nav-container">
+            <p class="nav-contact">contactus@placeme.in | +91 22 3434 5483</p>
+        </div>
+    </nav>
+    
+    <br> <br> <br> <br><h1>Welcome to the Dashboard</h1>
+    <div class="tags">
+        <li><a href="blogs.html" class="animated-link">Blogs</a><img src="blog.png" alt=""></li>
+        <li><a href="faqs.html" class="animated-link">FAQs</a><img src="FAQss.png" alt=""></li>
+        <li><a href="queries.html" class="animated-link">Queries</a><img src="faq.png" alt=""></li>
+    </div>
+        
+</body>
+</html>
